@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Fixed the accessibility requirement to have a lang attribute for HTML-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#262932">
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='mobile-web-app-capable' content='yes'>
+  <meta name="author" content="Chad Andersen">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" />
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+    <link rel="stylesheet" type="/text/css" href="css/styles-min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link rel="manifest" href="/manifest.json">
+  <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+  <!-- Beginning header -->
+  <header>
+    <!-- Beginning nav -->
+  <body>
+    <header>
+      <a href="#restaurant-name" class="skip-link" tabindex="0">Skip to main content</a>
+      <nav>
+        <h1>
+          <a href="/"><i class="fas fa-utensils"></i> Restaurant Reviews</a>
+        </h1>
+      </nav>
+    </header>
+    <!-- Beginning breadcrumb -->
+    <ul id="breadcrumb" role="navigation" aria-label="breadcrumb">
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main id="maincontent">
+    <!-- Beginning map -->
+    <section id="map-container">
+      <section id="mapid" role="application" aria-label="Leaflet Map"></section>
+    </section>
+    <!-- End map -->
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container">
+      <h2 id="restaurant-name"></h2>
+      <img id="restaurant-img" tabindex="0">
+      <p id="restaurant-cuisine" tabindex="0"></p>
+      <p id="restaurant-address" tabindex="0"></p>
+      <!-- <p id="restaurant-favorite" tabindex="0"></p> -->
+      <table id="restaurant-hours" tabindex="0" align="center"></table>
+    </section>
+    <!-- end restaurant -->
+    <!-- Beginning reviews -->
+    <section id="reviews-container" tabindex="0">
+      <ul id="reviews-list" tabindex="0"></ul>
+    </section>
+    <!-- End reviews -->
+    <!-- Beginning add review -->
+    <section id="reviews-form">
+      <h3>Add your review</h3>
+      <form>
+        <span>User name:</span>
+        <input type="text" id="review-usernameinput" name="user" placeholder="User Name">
+        <span>Rating:</span>
+        <select id="review-rating" name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+        </select>
+        <br>
+        <br> <span>Comment:</span>
+        <br>
+        <textarea id="review-comment" type="text" name="comment" placeholder="Comment"></textarea>
+        <br>
+        <br>
+        <input type="button" onclick="sendRestaurantReview()" id="submitBtn" value="Submit">
+      </form>
+    </section>
+  </main>
+  <!-- End main -->
+
+  <!-- Beginning footer -->
+  <footer id="footer">
+    Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+
+
+  <!-- Beginning scripts -->
+  <!--IndexDB-->
+  <script type="text/javascript" src="js/idb.js"></script>
+  <!--Register Service Worker-->
+  <script type="text/javascript" src="js/register.js"></script>
+  <!--Service Worker-->
+  <script type="text/javascript" src="/sw.js"></script>
+  <!--Leaflet Map-->
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+  <!--Bouncemarker-->
+  <script type="text/javascript" src="js/bouncemarker.js"></script>
+  <!-- Database helpers -->
+  <script type="text/javascript" src="js/dbhelper.js"></script>
+  <!-- Main javascript file -->
+  <script type="text/javascript" src="js/restaurant_info.js"></script>
+  <!-- Google Maps -->
+<!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLxtJwG3ElpY6GTMVFxab_LJ_rekXPUzI&libraries=places&callback=initMap" alt="Map"></script> -->
+  <!-- End scripts -->
+</body>
+
+</html>
