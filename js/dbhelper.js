@@ -348,11 +348,14 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
-  /**
+ /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`./img/${restaurant.id}`);
+    /* add extension to filename */
+    if (restaurant.photograph == undefined)
+      restaurant.photograph = restaurant.id;
+    return (`/img/${restaurant.photograph}` + ".jpg");
   }
 
   /**
