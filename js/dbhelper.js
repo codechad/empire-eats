@@ -351,16 +351,6 @@ class DBHelper {
   /**
    * Restaurant image URL.
    */
-  /*static imageUrlForRestaurant(restaurant) {
-    /* add extension to filename */
-    if (restaurant.photograph == undefined)
-      restaurant.photograph = restaurant.id;
-    return (`/img/${restaurant.photograph}` + ".jpg");
-  }*/
-
-  /**
-   * Restaurant image URL.
-   */
   static imageUrlForRestaurant(restaurant) {
     return (`./img/${restaurant.id}`);
   }
