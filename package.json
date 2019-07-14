@@ -58,6 +58,7 @@
     "package-lock.json": "^1.0.0",
     "plugin-error": "^1.0.1",
     "replace-ext": "^1.0.0",
+    "tar": "^4.4.10",
     "tunnel-agent": "^0.6.0",
     "useref": "^1.4.1",
     "vinyl": "^2.2.0"
