@@ -65,5 +65,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "typings": "lib/idb.d.ts",
-  "version": "2.1.3"
+  "version": "2.1.3",
+  "dependencies": {
+    "lodash-template": "^1.0.0"
+  }
 }
