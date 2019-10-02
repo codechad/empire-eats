@@ -27,7 +27,7 @@ class DBHelper {
 
       if (data.is_favorite) {
         data.is_favorite = false;
-        let url = `https://ny-restaurant-reviews.herokuapp.com/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://github.com/codechad/Restaurant-Reviews/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Unfavorite';
         fetch(url, {
@@ -38,7 +38,7 @@ class DBHelper {
       }
       else {
         data.is_favorite = true;
-        let url = `https://ny-restaurant-reviews.herokuapp.com/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://github.com/codechad/Restaurant-Reviews/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Favorite';
         fetch(url, {
