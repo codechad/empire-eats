@@ -53,6 +53,7 @@
     "lodash.template": "^4.5.0",
     "mocha": "^6.2.0",
     "modernizr": "^3.7.1",
+    "sails": "^1.2.3",
     "tar": "^4.4.13",
     "tunnel-agent": "^0.6.0"
   }
