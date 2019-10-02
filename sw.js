@@ -32,7 +32,7 @@ self.addEventListener('install', function (event) {
                 './js/bouncemarker.js',
                 './js/main.js',
                 './js/restaurant_info.js',
-                'https://codechad.github.io/Restaurant-Reviews/restaurants/',
+                './data/restaurants.json',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
             ]);
