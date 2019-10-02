@@ -8,8 +8,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-    const port = 3000 // Change this to your server port
-    return `https://ny-restaurant-reviews.herokuapp.com`;
+    const port =  1377 // Change this to your server port
+    return `https://codechad.github.io/Restaurant-Reviews/`;
   }
 
 
@@ -88,7 +88,7 @@ class DBHelper {
 
 
   static addReviewToDB(review) {
-    fetch('https://ny-restaurant-reviews.herokuapp.com/reviews/', {
+    fetch('https://codechad.github.io/Restaurant-Reviews/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -390,7 +390,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('https://ny-restaurant-reviews.herokuapp.com/reviews/', {
+    return fetch('https://codechad.github.io/Restaurant-Reviews/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
