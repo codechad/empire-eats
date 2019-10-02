@@ -390,7 +390,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('http://localhost:1337/reviews/', {
+    return fetch('https://ny-restaurant-reviews.herokuapp.com/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
