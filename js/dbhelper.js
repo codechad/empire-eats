@@ -9,7 +9,7 @@ class DBHelper {
    */
   static DATABASE_URL(path) {
     const port =  1337 // Change this to your server port
-    return `https://codechad.github.io/Restaurant-Reviews/`;
+    return `https://codechad.github.io/Restaurant-Reviews/restaurants`;
   }
 
 
