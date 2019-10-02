@@ -46,6 +46,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chai": "^4.2.0",
+    "express": "4.17.1",
     "gulp-browserify": "^0.5.1",
     "gulp-update": "0.0.2",
     "gulp-watch": "^5.0.0",
@@ -55,6 +56,7 @@
     "mocha": "^6.2.0",
     "modernizr": "^3.7.1",
     "sails": "^1.2.3",
+    "socket.io": "2.3.0",
     "tar": "^4.4.13",
     "tunnel-agent": "^0.6.0"
   }
