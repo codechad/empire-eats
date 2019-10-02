@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-    const port =  1377 // Change this to your server port
+    const port =  1337 // Change this to your server port
     return `https://codechad.github.io/Restaurant-Reviews/`;
   }
 
