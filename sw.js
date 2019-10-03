@@ -9,7 +9,7 @@ self.addEventListener('install', function (event) {
             return cache.addAll([
                 '/',
                 'css/styles.css',
-                'data/restaurants.json',
+                'https://chefrate.glitch.me/restaurants/',
                 'img/1.jpg',
                 'img/10.jpg',
                 'img/2.jpg',
