@@ -1,13 +1,10 @@
-import idb from './idb.js';
-
 class DBHelper {
 
   /**
    * Database URL.
-   * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-        return `https://chefrate.glitch.me/restaurants`;
+    return `https://chef-rate.glitch.me/restaurants`;
   }
 
 
@@ -25,7 +22,7 @@ class DBHelper {
 
       if (data.is_favorite) {
         data.is_favorite = false;
-        let url = `https://chefrate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://chef-rate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Unfavorite';
         fetch(url, {
@@ -86,7 +83,7 @@ class DBHelper {
 
 
   static addReviewToDB(review) {
-    fetch('https://chefrate.glitch.me/reviews/', {
+    fetch('https://chef-rate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -346,7 +343,7 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
- /**
+  /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
@@ -388,7 +385,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('https://chefrate.glitch.me/reviews/', {
+    return fetch('https://chef-rate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
