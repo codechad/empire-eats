@@ -343,10 +343,12 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
-   static imageUrlForRestaurant(restaurant) {
-      if(restaurant.photograph !== undefined)
-          return (`/img/${restaurant.photograph}.jpg`);
-      else
+    /**
+   * Restaurant image URL.
+   */
+  static imageUrlForRestaurant(restaurant) {
+    return (`/img/${restaurant.photograph}`);
+        else
           return ('/img/placeholder.png');
   }
 
