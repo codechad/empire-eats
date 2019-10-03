@@ -10,6 +10,7 @@ self.addEventListener('install', function (event) {
                 './',
                 './index.html',
                 './restaurant.html',
+                './data/restaurants.json',
                 './sw.js',
                 './favicon-32x32.png',
                 './css/styles.css',
@@ -30,7 +31,6 @@ self.addEventListener('install', function (event) {
                 './js/bouncemarker.js',
                 './js/main.js',
                 './js/restaurant_info.js',
-                'https://chefrate.glitch.me',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
             ]);
