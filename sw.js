@@ -11,7 +11,7 @@ self.addEventListener('install', function (event) {
                 './index.html',
                 './restaurant.html',
                 './sw.js',
-                './favicon.ico',
+                './favicon-32x32.png',
                 './css/styles.css',
                 './img/1.jpg',
                 './img/10.jpg',
