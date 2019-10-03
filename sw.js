@@ -30,46 +30,10 @@ self.addEventListener('install', e => {
         })
     );
 });
-
-// deletes old cache
-self.addEventListener('activate', function (event) {
-            // console.log("Service Worker activated");
-            e.waitUntil(
-                caches.keys().then(cacheNames => {
-                    return Promise.all(
-                        cacheNames.filter(function (cacheName) {
-                            return cacheName.startsWith(staticCacheName) &&
-                                cacheName != staticCacheName;
-                        }).map(function (cacheName) {
-                            return caches.delete(cacheName);
-                        })
-                    );
-                    // console.log("Old cache removed");
-                })
-            );
-        });
-
-    self.addEventListener('fetch', function (event) {
-        // console.log("Service Worker starting fetch");
-        event.respondWith(
-            caches.open(staticCacheName).then(function (cache) {
-                return cache.match(event.request).then(function (response) {
-                    if (response) {
-                        // console.log("data fetched from cache");
-                        return response;
-                    }
-                    else {
-                        return fetch(event.request).then(function (networkResponse) {
-                            // console.log("data fetched from network", event.request.url);
-                            //cache.put(event.request, networkResponse.clone());
-                            return networkResponse;
-                        }).catch(function (error) {
-                            console.log('Unable to fetch data from network', event.request.url, error);
-                        });
-                    }
-                });
-            }).catch(function (error) {
-                console.log('Something went wrong with Service Worker fetch intercept', error);
-            })
-        );
-    });
+self.addEventListener('fetch', e => {
+    e.respondWith(
+        caches.match(e.request).then(response => {
+            return response || fetch(e.request);
+        })
+    );
+});
