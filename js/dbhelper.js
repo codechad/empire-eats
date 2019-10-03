@@ -37,7 +37,7 @@ class DBHelper {
       }
       else {
         data.is_favorite = true;
-        let url = `https://restaurant-review.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://chef-rate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Favorite';
         fetch(url, {
