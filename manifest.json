@@ -3,7 +3,7 @@
     "short_name": "Reviews 2",
     "background_color": "#fdfdfd",
     "theme_color": "#262932",
-    "start_url": "index.html",
+    "start_url": "/",
     "orientation": "landscape",
     "display": "fullscreen",
     "icons": [
