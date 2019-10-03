@@ -4,7 +4,7 @@ class DBHelper {
    * Database URL.
    */
   static DATABASE_URL(path) {
-    return `https://chef-rate.glitch.me/restaurants`;
+    return `https://chefrate.glitch.me/restaurants`;
   }
 
 
@@ -22,7 +22,7 @@ class DBHelper {
 
       if (data.is_favorite) {
         data.is_favorite = false;
-        let url = `https://chef-rate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://chefrate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Unfavorite';
         fetch(url, {
@@ -33,7 +33,7 @@ class DBHelper {
       }
       else {
         data.is_favorite = true;
-        let url = `https://chef-rate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://chefrate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Favorite';
         fetch(url, {
@@ -83,7 +83,7 @@ class DBHelper {
 
 
   static addReviewToDB(review) {
-    fetch('https://chef-rate.glitch.me/reviews/', {
+    fetch('https://chefrate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -385,7 +385,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('https://chef-rate.glitch.me/reviews/', {
+    return fetch('https://chefrate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
