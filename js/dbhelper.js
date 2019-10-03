@@ -8,8 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-    const port = 1337
-    return `https://chefrate.glitch.me/restaurants`;
+        return `https://chefrate.glitch.me/restaurants`;
   }
 
 
