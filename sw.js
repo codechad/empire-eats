@@ -1,5 +1,5 @@
 /* Setting up the variable for the service worker functions */
-const staticCacheName = 'chef-rate-v1';
+const staticCacheName = 'restaurant-reviews-v4';
 
 /* Installs the data to store */
 self.addEventListener('install', function (event) {
@@ -49,7 +49,7 @@ self.addEventListener('activate', function (event) {
                 caches.keys().then(function (cacheNames) {
                     return Promise.all(
                         cacheNames.filter(function (cacheName) {
-                            return cacheName.startsWith('chef-rate-') &&
+                            return cacheName.startsWith('restaurant-reviews-') &&
                                 cacheName != staticCacheName;
                         }).map(function (cacheName) {
                             return caches.delete(cacheName);
