@@ -24,6 +24,7 @@ self.addEventListener('install', function (event) {
                 'img/favicon-32x32.png',
                 'img/marker-icon-2x-red.png',
                 'img/marker-shadow.png',
+                'manifest.json',
                 'js/idb.js',
                 'js/dbhelper.js',
                 'js/bouncemarker.js',
