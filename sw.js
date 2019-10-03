@@ -1,5 +1,5 @@
 /* Setting up the variable for the service worker functions */
-const staticCacheName = 'restaurant-reviews-v4';
+let staticCacheName = 'restaurant-reviews-v4';
 
 self.addEventListener('install', e => {
     e.waitUntil(
