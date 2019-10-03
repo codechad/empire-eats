@@ -389,7 +389,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('https://codechad.github.io/Restaurant-Reviews/reviews/', {
+    return fetch('https://restaurant-review.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
