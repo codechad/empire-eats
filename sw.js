@@ -32,7 +32,7 @@ self.addEventListener('install', function (event) {
                 './js/bouncemarker.js',
                 './js/main.js',
                 './js/restaurant_info.js',
-                'http://localhost:1337/restaurants/',
+                'https://chefrate.glitch.me/restaurants/',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
             ]);
