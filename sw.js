@@ -10,6 +10,7 @@ self.addEventListener('install', function (event) {
                 '.',
                 '/index.html',
                 '/restaurant.html',
+                '/sw.js',
                 '/favicon.ico',
                 '/css/styles.css',
                 '/css/styles-min.css',
