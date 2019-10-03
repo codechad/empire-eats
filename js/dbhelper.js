@@ -343,12 +343,13 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
   
-  /**
-   * Restaurant image URL.
-   */
-  static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.id}.jpg`);
-  }
+
+    /**
+     * Restaurant image URL.
+     */
+    static imageUrlForRestaurant(restaurant) {
+        return (`./img/${restaurant.photograph}`);
+    }
 
   static altForRestaurant(restaurant) {
     return (`${restaurant.name}`);
