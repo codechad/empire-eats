@@ -9,6 +9,7 @@ self.addEventListener('install', e => {
                 '/',
                 'css/styles.css',
                 'data/restaurants.json',
+                'https://chefrate.glitch.me/restaurants',
                 'img/1.jpg',
                 'img/2.jpg',
                 'img/3.jpg',
