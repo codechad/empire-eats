@@ -9,7 +9,7 @@ class DBHelper {
    */
   static DATABASE_URL(path) {
     const port =  1337 // Change this to your server port
-    return `https://codechad.github.io/Restaurant-Reviews/data/restaurants.json`;
+    return `https://glitch.com/~restaurant-review/restaurants`;
   }
 
 
@@ -38,7 +38,7 @@ class DBHelper {
       }
       else {
         data.is_favorite = true;
-        let url = `https://github.com/codechad/Restaurant-Reviews/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://glitch.com/~restaurant-review/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Favorite';
         fetch(url, {
@@ -88,7 +88,7 @@ class DBHelper {
 
 
   static addReviewToDB(review) {
-    fetch('https://codechad.github.io/Restaurant-Reviews/reviews/', {
+    fetch('https://glitch.com/~restaurant-review/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
