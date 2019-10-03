@@ -1,9 +1,9 @@
 {
-    "name": "Restaurant Reviews",
+    "name": "Chef Rate",
     "short_name": "Reviews",
     "background_color": "#fdfdfd",
     "theme_color": "#262932",
-    "start_url": "index.html",
+    "start_url": ".",
     "orientation": "landscape",
     "display": "fullscreen",
     "icons": [
