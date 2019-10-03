@@ -350,7 +350,9 @@ class DBHelper {
     /* add extension to filename */
     if (restaurant.photograph == undefined)
       restaurant.photograph = restaurant.id;
-    return (`/img/${restaurant.photograph}` + ".jpg");
+    return (`/img/${restaurant.photograph}.jpg");
+      else
+        return ('/img/placeholder.png');
   }
 
   /**
