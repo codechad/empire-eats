@@ -8,7 +8,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-    return `https://restaurant-review.glitch.me/restaurants`;
+    const port = 1337
+    return `https://chefrate.glitch.me/restaurants`;
   }
 
 
@@ -26,7 +27,7 @@ class DBHelper {
 
       if (data.is_favorite) {
         data.is_favorite = false;
-        let url = `https://restaurant-review.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://chefrate.glitch.me/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Unfavorite';
         fetch(url, {
@@ -87,7 +88,7 @@ class DBHelper {
 
 
   static addReviewToDB(review) {
-    fetch('https://restaurant-review.glitch.me/reviews/', {
+    fetch('https://chefrate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -389,7 +390,7 @@ class DBHelper {
   }
 
   static postReview(review) {
-    return fetch('https://restaurant-review.glitch.me/reviews/', {
+    return fetch('https://chefrate.glitch.me/reviews/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
