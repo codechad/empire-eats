@@ -8,7 +8,6 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static DATABASE_URL(path) {
-    const port =  1337 // Change this to your server port
     return `https://glitch.com/~restaurant-review/restaurants`;
   }
 
@@ -27,7 +26,7 @@ class DBHelper {
 
       if (data.is_favorite) {
         data.is_favorite = false;
-        let url = `https://github.com/codechad/Restaurant-Reviews/restaurants/${restaurant.id}/?is_favorite=false`
+        let url = `https://glitch.com/~restaurant-review/restaurants/${restaurant.id}/?is_favorite=false`
         let button = document.getElementById(`favBtn-${restaurant.id}`)
         button.innerHTML = 'Unfavorite';
         fetch(url, {
