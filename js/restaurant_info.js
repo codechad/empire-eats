@@ -27,7 +27,7 @@ initMap = () => {
       function onMapClick(e) {
         popup
           .setLatLng(e.latlng)
-          .setContent("You clicked the map at " + e.latlng.toString())
+          .setContent('You clicked the map at ' + e.latlng.toString())
           .openOn(mymap);
       }
 
@@ -203,13 +203,13 @@ getParameterByName = (name, url) => {
 }
 
 sendRestaurantReview = (e) => {
-  let userName = document.getElementById("review-usernameinput").value;
-  const rating = document.getElementById("review-rating").value;
-  let comments = document.getElementById("review-comment").value
+  let userName = document.getElementById('review-usernameinput').value;
+  const rating = document.getElementById('review-rating').value;
+  let comments = document.getElementById('review-comment').value
   const id = getParameterByName('id');
   DBHelper.addReviewToDB({ restaurant_id: id, name: userName, rating: rating, comments: comments })
-  document.getElementById("review-usernameinput").value = ""
-  document.getElementById("review-comment").value = ""
+  document.getElementById('review-usernameinput').value = ''
+  document.getElementById('review-comment').value = ''
 }
 
 initMap();
