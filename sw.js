@@ -1,5 +1,5 @@
 /* Setting up the variable for the service worker functions */
-const staticCacheName = "chef-rate-v1";
+const staticCacheName = 'chef-rate-v1';
 
 /* Installs the data to store */
 self.addEventListener('install', function (event) {
@@ -12,7 +12,7 @@ self.addEventListener('install', function (event) {
                 './restaurant.html',
                 './sw.js',
                 './manifest.json',
-                './favicon-16x16.png',
+                './favicon.ico',
                 './css/styles.css',
                 './css/styles-min.css',
                 './img/1.jpg',
@@ -32,7 +32,7 @@ self.addEventListener('install', function (event) {
                 './js/bouncemarker.js',
                 './js/main.js',
                 './js/restaurant_info.js',
-                'https://chef-rate.glitch.me/restaurants/'
+                'http://localhost:1337/restaurants/',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
             ]);
@@ -49,7 +49,7 @@ self.addEventListener('activate', function (event) {
                 caches.keys().then(function (cacheNames) {
                     return Promise.all(
                         cacheNames.filter(function (cacheName) {
-                            return cacheName.startsWith('chef-rate-') &&
+                            return cacheName.startsWith('restaurant-reviews-') &&
                                 cacheName != staticCacheName;
                         }).map(function (cacheName) {
                             return caches.delete(cacheName);
@@ -75,12 +75,12 @@ self.addEventListener('activate', function (event) {
                             //cache.put(event.request, networkResponse.clone());
                             return networkResponse;
                         }).catch(function (error) {
-                            console.log("Unable to fetch data from network", event.request.url, error);
+                            console.log('Unable to fetch data from network', event.request.url, error);
                         });
                     }
                 });
             }).catch(function (error) {
-                console.log("Something went wrong with Service Worker fetch intercept", error);
+                console.log('Something went wrong with Service Worker fetch intercept', error);
             })
         );
     });
