@@ -1,5 +1,5 @@
 /* Setting up the variable for the service worker functions */
-const staticCacheName = 'chef-rate-v1';
+const staticCacheName = 'restaurant-reviews-v4';
 
 /* Installs the data to store */
 self.addEventListener('install', function (event) {
