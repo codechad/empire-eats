@@ -72,9 +72,9 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  font-size: 0.85em;
   font-weight: 200;
-  letter-spacing: 3px;
+  letter-spacing: 10px;
   text-transform: uppercase;
 }
 .skip-link {
