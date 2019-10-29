@@ -75,7 +75,7 @@ const loc = {
   lng: -73.987501
 };
 const mymap = L.map('mapid', {
-  zoom: 12.5,
+  zoom: 12,
   center: loc,
   scrollWheelZoom: false,
 });
