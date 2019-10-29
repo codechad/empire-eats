@@ -71,8 +71,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  * Initialize Leaflet map.
  */
 const loc = {
-  lat: 40.722216,
-  lng: -73.987501
+  lat: 40.714372,
+  lng: -73.996387
 };
 const mymap = L.map('mapid', {
   zoom: 12,
