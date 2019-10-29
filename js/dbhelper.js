@@ -361,7 +361,7 @@ class DBHelper {
   static mapMarkerForRestaurant(restaurant, map) {
     // icon color plugin came from this repo https://github.com/pointhi/leaflet-color-markers
     const redIcon = new L.Icon({
-      iconUrl: './img/marker-icon-2x-red.png',
+      iconUrl: './img/Location-map-pin-marker-food-512.png',
       shadowUrl: './img/marker-shadow.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
