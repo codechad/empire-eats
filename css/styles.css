@@ -131,7 +131,7 @@ nav h1 a {
   overflow: hidden;
 }
 #mapid {
-  max-height: 525px;
+  height: 525px;
   width: 100%;
   background-color: #ccc;
 }
