@@ -55,6 +55,8 @@
     "lodash.template": "^4.5.0",
     "mocha": "^6.2.0",
     "modernizr": "^3.7.1",
+    "py": "0.0.0",
+    "python": "0.0.4",
     "sails": "^1.2.3",
     "socket.io": "2.3.0",
     "tar": "^4.4.13",
