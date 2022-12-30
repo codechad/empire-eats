@@ -28,7 +28,7 @@
     "del": "^5.1.0",
     "filesize": "^6.1.0",
     "glob": "^7.1.6",
-    "mocha": "^7.2.0",
+    "mocha": "^10.2.0",
     "prettier": "^2.0.5",
     "rollup": "^2.10.9",
     "rollup-plugin-node-resolve": "^5.2.0",
